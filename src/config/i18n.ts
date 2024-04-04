@@ -4,7 +4,6 @@ import Backend from "i18next-http-backend";
 
 export default class I18n {
   public static options: InitOptions = {
-    ns: ["shared"],
     defaultNS: "shared",
     fallbackNS: "shared",
     backend: {
