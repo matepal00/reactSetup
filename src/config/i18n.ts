@@ -7,11 +7,14 @@ export default class I18n {
     defaultNS: "shared",
     fallbackNS: "shared",
     backend: {
-      loadPath: "/public/locales/{{ns}}.json",
+      loadPath: "/locales/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false,
     },
+    lng: "en",
+    fallbackLng: "en",
+    ns: ["shared"],
   };
 
   public static init = (options: InitOptions = {}) =>

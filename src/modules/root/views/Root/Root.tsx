@@ -1,5 +1,8 @@
+import { useModuleTranslation } from "../../utils";
+
 const Root = () => {
-  return <div>Root</div>;
+  const { t } = useModuleTranslation({});
+  return <div>{t("title")}</div>;
 };
 
 export default Root;

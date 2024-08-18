@@ -3,14 +3,17 @@ import AppRoutes from "./App.routes";
 import { BrowserRouter } from "react-router-dom";
 import { Loader } from "../shared/components";
 import { Suspense } from "react";
+import ThemeProvider from "../shared/theme";
 
 const App = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <Suspense fallback={<Loader />}>
-          <AppRoutes />
-        </Suspense>
+        <ThemeProvider>
+          <Suspense fallback={<Loader />}>
+            <AppRoutes />
+          </Suspense>
+        </ThemeProvider>
       </BrowserRouter>
     </HelmetProvider>
   );
